@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('Main JS Loaded and DOMContentLoaded fired');
+    console.log('Main V2 JS Loaded');
     const header = document.getElementById('main-header');
     
     // Sticky Header Scroll Logic
@@ -33,6 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
         el.style.transition = 'all 0.6s ease-out';
         observer.observe(el);
     });
+
     // Mobile Menu Toggle
     const menuToggle = document.createElement('button');
     menuToggle.className = 'menu-toggle';
