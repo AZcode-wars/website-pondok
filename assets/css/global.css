@@ -1,13 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
-    --primary: #1a4d2e; /* Deep Islamic Green */
-    --primary-light: #4f6f52;
-    --secondary: #ff9f1c; /* Gold/Amber Accent */
-    --accent: #e8c872;
-    --background: #f8fafc;
+    --primary: #1E2F5B; /* Deep Navy Blue */
+    --primary-light: #3A4F7A;
+    --secondary: #C9A646; /* Gold Accent */
+    --accent: #C9A646;
+    --background: #FFFFFF;
+    --background-alt: #F5F7FA;
     --surface: #ffffff;
-    --text-main: #1e293b;
+    --text-main: #374151;
     --text-muted: #64748b;
     --glass: rgba(255, 255, 255, 0.8);
     --glass-border: rgba(255, 255, 255, 0.2);
@@ -22,7 +23,7 @@
 }
 
 body {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
     background-color: var(--background);
     color: var(--text-main);
     line-height: 1.6;
@@ -30,7 +31,7 @@ body {
 }
 
 h1, h2, h3, h4, .font-heading {
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Lora', serif;
 }
 
 .container {
@@ -83,6 +84,53 @@ nav {
 
 .nav-links a:hover {
     color: var(--primary);
+}
+
+/* Dropdown Styling */
+.nav-links .dropdown {
+    position: relative;
+}
+
+.nav-links .dropdown-toggle {
+    cursor: pointer;
+}
+
+.nav-links .dropdown-toggle::after {
+    margin-left: 0.35rem;
+    vertical-align: 0.15em;
+    border-top-color: var(--text-main);
+}
+
+.nav-links .dropdown-toggle:hover::after {
+    border-top-color: var(--primary);
+}
+
+.nav-links .dropdown-menu {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+    padding: 0.5rem 0;
+    min-width: 220px;
+    animation: dropdownFade 0.25s ease;
+}
+
+.nav-links .dropdown-item {
+    padding: 0.6rem 1.25rem;
+    font-weight: 500;
+    color: var(--text-main);
+    transition: var(--transition);
+    border-left: 3px solid transparent;
+}
+
+.nav-links .dropdown-item:hover {
+    background: var(--background-alt, #F5F7FA);
+    color: var(--primary);
+    border-left-color: var(--secondary);
+}
+
+@keyframes dropdownFade {
+    from { opacity: 0; transform: translateY(-8px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 .btn-cta {
