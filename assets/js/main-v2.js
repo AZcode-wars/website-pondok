@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    document.querySelectorAll('.feature-card, .info-section').forEach(el => {
+    document.querySelectorAll('.feature-card, .info-section, .about-grid, .contact-item, .contact-form-wrap, .stat-item, .section-cta').forEach(el => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(20px)';
         el.style.transition = 'all 0.6s ease-out';
